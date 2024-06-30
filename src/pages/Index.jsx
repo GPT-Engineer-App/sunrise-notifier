@@ -55,6 +55,11 @@ const Index = () => {
         </CardHeader>
         <CardContent>
           <Button onClick={getLocation}>Get Sunrise Time</Button>
+          {location && (
+            <p className="mt-4">
+              Location: Latitude {location.latitude.toFixed(2)}, Longitude {location.longitude.toFixed(2)}
+            </p>
+          )}
           {sunriseTime && (
             <p className="mt-4">Sunrise Time: {sunriseTime}</p>
           )}
